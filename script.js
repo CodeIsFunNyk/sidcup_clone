@@ -35,8 +35,8 @@ downIcon.addEventListener("mouseenter", () => {
 });
 downIcon.addEventListener("mouseleave", () => {
     downIcon.style.scale = 1;
-    downIcon.style.transition = "all linear .3s";
-})
+    downIcon.style.transition = "background linear .3s";
+});
 
 //GSAP for navbar
 gsap.to("#nav", {
@@ -94,8 +94,7 @@ gsap.from("#card1", {
         start: "top 60%",
         end: "top 30%"
     },
-    x: -100,
-    duration: 1,
+    left: -100,
     opacity: 0
 })
 //Card2
@@ -108,8 +107,7 @@ gsap.from("#card2", {
         start: "top 60%",
         end: "top 30%"
     },
-    y: 200,
-    duration: 1,
+    y: 100,
     opacity: 0
 })
 //Card3
@@ -123,7 +121,6 @@ gsap.from("#card3", {
         end: "top 30%"
     },
     right: -100,
-    duration: 1,
     opacity: 0
 });
 //GSAP for description
@@ -163,4 +160,18 @@ gsap.from("#colon2", {
     },
     x: 70,
     y: 70
+});
+
+gsap.to("#page3 h1", {
+    scrollTrigger: {
+        trigger: "#page3 h1",
+        scroller: "body",
+        // markers: true,
+        scrub: 1,
+        start: "top 70%",
+        end: "top -1000%",
+        pin: "#page3"
+    },
+    x: -5500,
+    duration: 1
 })
